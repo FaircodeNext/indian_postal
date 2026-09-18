@@ -11,7 +11,10 @@ frappe.ui.form.on("Indian Postal Code", {
 			frappe.dom.freeze(__("Fetching latest postal data..."));
 			frm.call("fetch_latest_data")
 				.then(() => {
-					frappe.show_alert({ message: __("Postal data refreshed."), indicator: "green" });
+					frappe.show_alert({
+						message: __("Postal data refreshed."),
+						indicator: "green",
+					});
 					frm.reload_doc();
 				})
 				.finally(() => frappe.dom.unfreeze());

@@ -8,7 +8,10 @@ frappe.ui.form.on("Address", {
 		});
 
 		frm.set_query("custom_post_office", () => ({
-			filters: Object.assign({ disabled: 0 }, frm.doc.pincode ? { pincode: frm.doc.pincode } : {}),
+			filters: Object.assign(
+				{ disabled: 0 },
+				frm.doc.pincode ? { pincode: frm.doc.pincode } : {}
+			),
 		}));
 	},
 
