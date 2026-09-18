@@ -1,0 +1,103 @@
+[
+ {
+  "doctype": "Custom Field",
+  "dt": "Address",
+  "fieldname": "custom_post_office",
+  "fieldtype": "Link",
+  "options": "Indian Postal Code",
+  "label": "Post Office",
+  "insert_after": "pincode",
+  "name": "Address-custom_post_office",
+  "in_standard_filter": 0,
+  "translatable": 0,
+  "description": "Select the Post Office matching the Pincode above. Populates the Postal Information section."
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Address",
+  "fieldname": "postal_information_section",
+  "fieldtype": "Section Break",
+  "label": "Postal Information",
+  "insert_after": "custom_post_office",
+  "name": "Address-postal_information_section",
+  "collapsible": 1
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Address",
+  "fieldname": "custom_branch_type",
+  "fieldtype": "Data",
+  "label": "Branch Type",
+  "insert_after": "postal_information_section",
+  "name": "Address-custom_branch_type",
+  "read_only": 1
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Address",
+  "fieldname": "custom_delivery_status",
+  "fieldtype": "Data",
+  "label": "Delivery Status",
+  "insert_after": "custom_branch_type",
+  "name": "Address-custom_delivery_status",
+  "read_only": 1
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Address",
+  "fieldname": "custom_column_break_postal",
+  "fieldtype": "Column Break",
+  "insert_after": "custom_delivery_status",
+  "name": "Address-custom_column_break_postal"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Address",
+  "fieldname": "custom_postal_circle",
+  "fieldtype": "Data",
+  "label": "Postal Circle",
+  "insert_after": "custom_column_break_postal",
+  "name": "Address-custom_postal_circle",
+  "read_only": 1
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Address",
+  "fieldname": "custom_postal_district",
+  "fieldtype": "Data",
+  "label": "Postal District",
+  "insert_after": "custom_postal_circle",
+  "name": "Address-custom_postal_district",
+  "read_only": 1
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Address",
+  "fieldname": "custom_postal_division",
+  "fieldtype": "Data",
+  "label": "Postal Division",
+  "insert_after": "custom_postal_district",
+  "name": "Address-custom_postal_division",
+  "read_only": 1
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Address",
+  "fieldname": "custom_postal_region",
+  "fieldtype": "Data",
+  "label": "Postal Region",
+  "insert_after": "custom_postal_division",
+  "name": "Address-custom_postal_region",
+  "read_only": 1
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Address",
+  "fieldname": "custom_postal_block",
+  "fieldtype": "Data",
+  "label": "Postal Block",
+  "insert_after": "custom_postal_region",
+  "name": "Address-custom_postal_block",
+  "read_only": 1
+ }
+]

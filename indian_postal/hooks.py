@@ -1,6 +1,6 @@
 app_name = "indian_postal"
 app_title = "Indian Postal"
-app_publisher = "Faircode Technologies"
+app_publisher = "FaircodeNext Technologies"
 app_description = "Indian Post Office Pincode and Postal Details integration for ERPNext Address"
 app_email = "nakul@faircodetech.com"
 app_license = "mit"
@@ -43,7 +43,7 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Address": "public/js/address.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -177,6 +177,31 @@ app_license = "mit"
 # -------
 
 # before_tests = "indian_postal.install.before_tests"
+
+# Fixtures
+# --------
+# Address custom fields (Post Office + Postal Information section) exported so
+# `bench migrate` / `bench install-app` recreate them on any site.
+
+POSTAL_ADDRESS_FIELDNAMES = [
+	"custom_post_office",
+	"postal_information_section",
+	"custom_branch_type",
+	"custom_delivery_status",
+	"custom_column_break_postal",
+	"custom_postal_circle",
+	"custom_postal_district",
+	"custom_postal_division",
+	"custom_postal_region",
+	"custom_postal_block",
+]
+
+fixtures = [
+	{
+		"dt": "Custom Field",
+		"filters": [["dt", "=", "Address"], ["fieldname", "in", POSTAL_ADDRESS_FIELDNAMES]],
+	},
+]
 
 # Extend DocType Class
 # ------------------------------
