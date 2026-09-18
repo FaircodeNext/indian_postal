@@ -1,7 +1,7 @@
 [project]
 name = "indian_postal"
 authors = [
-    { name = "Faircode Technologies", email = "nakul@faircodetech.com"}
+    { name = "FaircodeNext Technologies", email = "nakul@faircodetech.com"}
 ]
 description = "Indian Post Office Pincode and Postal Details integration for ERPNext Address"
 requires-python = ">=3.14"
